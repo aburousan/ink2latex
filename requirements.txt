@@ -1,0 +1,6 @@
+numpy>=1.26
+onnx>=1.17
+onnxruntime>=1.20
+# PyTorch is a separate training/checkpoint-tool dependency. It is not needed
+# for preprocessing, ONNX-only inference, or the static browser demo.
+# Install torch 2.7 (CUDA 12.8) on the training server; see README.md.

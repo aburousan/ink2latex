@@ -1,0 +1,24 @@
+{
+  "opset": 17,
+  "max_abs_diff": {
+    "memory": 1.9669532775878906e-06,
+    "logits": 5.245208740234375e-06,
+    "cached_vs_prefix": 2.9206275939941406e-06
+  },
+  "fp32_bytes": {
+    "encoder": 22130786,
+    "decoder": 17643308
+  },
+  "int8": {
+    "accepted": false,
+    "bytes": {
+      "encoder": 8023059,
+      "decoder": 4967381
+    },
+    "rows": 1000,
+    "fp32_exact_match": 0.681,
+    "int8_exact_match": 0.669,
+    "drop_pp": 1.2,
+    "reason": "Accuracy drop exceeds 0.5 percentage points"
+  }
+}

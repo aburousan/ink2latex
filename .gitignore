@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+/data/
+/runs/
+/checkpoints/
+*.pt
+*.pth
+*.inkml
+*.npz
+*.pkl
+node_modules/
+# Exported demo/models assets are intentionally versionable.
+!demo/models/
+!demo/models/**

@@ -1,0 +1,267 @@
+:root {
+  font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:#243b35;
+  background:#f6f3ec;
+  font-synthesis:none;
+}
+* {
+  box-sizing:border-box;
+}
+body {
+  margin:0;
+}
+main {
+  max-width:1020px;
+  padding:36px 32px 24px;
+  margin:auto;
+}
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.wordmark {
+  font-size:24px;
+  letter-spacing:-1px;
+  font-weight:750;
+}
+.wordmark span {
+  color:#b8643b;
+}
+.badge {
+  font-size:12px;
+  border:1px solid #cdd6c8;
+  border-radius:30px;
+  padding:7px 13px;
+  background:#eef1e7;
+}
+.badge:before {
+  content:"●";
+  color:#64885a;
+  margin-right:7px;
+}
+.intro {
+  padding:62px 0 34px;
+}
+.eyebrow {
+  font-size:10px;
+  letter-spacing:2.4px;
+  color:#9b603e;
+  font-weight:700;
+}
+h1 {
+  font-family:Georgia,serif;
+  font-weight:400;
+  font-size:clamp(40px,6vw,62px);
+  line-height:1.08;
+  letter-spacing:-2px;
+  margin:18px 0;
+}
+.intro>p:last-child {
+  max-width:480px;
+  color:#66716a;
+  line-height:1.6;
+  font-size:15px;
+}
+.workspace,.result {
+  border:1px solid #dcded3;
+  border-radius:16px;
+  background:#fffefa;
+  overflow:hidden;
+}
+.canvas-heading,.result-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 22px;
+  font-size:11px;
+  letter-spacing:1px;
+  color:#748077;
+}
+.canvas-heading>div {
+  display:flex;
+  gap:8px;
+}
+.canvas-wrap {
+  position:relative;
+  height:330px;
+  background-image:radial-gradient(#d8ded3 .8px,transparent .8px);
+  background-size:22px 22px;
+}
+canvas {
+  width:100%;
+  height:100%;
+  display:block;
+  touch-action:none;
+  cursor:crosshair;
+}
+#hint {
+  position:absolute;
+  top:49%;
+  width:100%;
+  text-align:center;
+  color:#a2a99d;
+  font-family:Georgia,serif;
+  font-style:italic;
+  pointer-events:none;
+}
+#photo-note {
+  margin:0;
+  padding:10px 22px;
+  color:#6b766c;
+  font-size:12px;
+  line-height:1.5;
+}
+.toolbar {
+  border-top:1px solid #e7e9df;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 22px;
+}
+.toolbar label {
+  font-size:12px;
+  color:#6b766c;
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+input {
+  accent-color:#345647;
+}
+button {
+  font:inherit;
+  cursor:pointer;
+  border:0;
+  border-radius:7px;
+  transition:background .15s;
+}
+button:focus-visible {
+  outline:3px solid #c28450;
+  outline-offset:3px;
+}
+button:disabled {
+  opacity:.45;
+  cursor:wait;
+}
+.quiet {
+  font-size:12px;
+  background:transparent;
+  padding:8px 10px;
+  color:#647465;
+}
+.quiet:hover {
+  background:#edf0e7;
+}
+.quiet.on {
+  background:#345647;
+  color:white;
+}
+canvas.erasing {
+  cursor:cell;
+}
+.primary {
+  background:#345647;
+  color:white;
+  padding:12px 22px;
+  font-size:13px;
+}
+.primary:hover {
+  background:#243f32;
+}
+.primary span {
+  margin-left:14px;
+}
+.result {
+  margin-top:20px;
+}
+#rendered {
+  min-height:110px;
+  display:grid;
+  place-items:center;
+  overflow-x:auto;
+  padding:24px;
+  color:#7f8b7e;
+  font-size:15px;
+}
+.source {
+  display:flex;
+  gap:10px;
+  border-top:1px solid #e7e9df;
+  padding:12px 20px;
+  background:#f9faf4;
+}
+.source textarea {
+  resize:vertical;
+  flex:1;
+  min-width:0;
+  border:0;
+  background:transparent;
+  font:13px/1.6 ui-monospace,monospace;
+  color:#4a5d4c;
+  outline-color:#c28450;
+}
+#status {
+  font-size:12px;
+  min-height:18px;
+  color:#7a806e;
+  padding:0 3px;
+}
+aside {
+  border-top:1px solid #dcded3;
+  margin-top:40px;
+  padding-top:16px;
+  max-width:740px;
+}
+h2 {
+  font-size:12px;
+  font-weight:600;
+}
+aside p {
+  font-size:12px;
+  line-height:1.7;
+  color:#7b8174;
+}
+footer {
+  margin-top:36px;
+  color:#8b907f;
+  font-family:Georgia,serif;
+  font-style:italic;
+  font-size:12px;
+}
+.sr-only {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+@media(max-width:600px) {
+  main {
+    padding:24px 16px;
+  }
+  .intro {
+    padding-top:38px;
+  }
+  .canvas-wrap {
+    height:310px;
+  }
+  .canvas-heading,.toolbar {
+    padding:12px;
+  }
+  .toolbar {
+    gap:8px;
+  }
+  .toolbar label {
+    font-size:10px;
+  }
+  .primary {
+    padding:12px;
+  }
+  .badge {
+    font-size:10px;
+  }
+}
